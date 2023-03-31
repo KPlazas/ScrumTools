@@ -1,0 +1,600 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+/*This is the style to the register and the login*/
+.container-form-register{
+    background-color: #172838;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 0px 0px 14px 2px #149CEA;
+    width: 380px;
+    height: 450px;
+    text-align: center;
+}
+
+.container-form-register .container-header h2{
+    margin-top: 30px;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 45px;
+    font-family: 'Lato', sans-serif;
+    font-size: 40px;
+    color: white;
+    font-weight: 600;
+}
+
+
+.container-header h2:hover{
+    color:#149CEA;
+    transition: 1s;
+    font-size:45px;
+}
+
+.container-form-register .container-body {
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.container-form-register .container-body input {
+    max-width: 220px;
+    width: 3000px;
+    height: 30px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    border-bottom: 2px solid #142331;    
+    background-color: #102233;
+    padding: 5px;
+    transition: .3s linear;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 1px;
+    margin-bottom: 13px;
+}
+
+.container-body input:focus {
+    border: 2px solid #149CEA;
+    caret-color: #149CEA;
+    color: #149CEA;
+    box-shadow: 4px 4px 10px #070707;
+}
+
+.container-body input::placeholder {
+    color: #149CEA;
+}
+
+
+.container-body button {
+    width: 10em;
+    position: relative;
+    height: 2em;
+    border: 3px ridge #149CEA;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    transition: 1s;
+    border-radius: 0.3em;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.container-body button::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: #172838;
+    transition: 0.5s;
+    transform-origin: center;
+}
+
+.container-body button::before {
+    content: "";
+    transform-origin: center;
+    position: absolute;
+    top: 80%;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: #172838;
+    transition: 0.5s;
+}
+
+.container-body button:hover::before,
+button:hover::after {
+    transform: scale(0)
+}
+
+.container-body button:hover {
+    box-shadow: inset 0px 0px 25px #1479EA;
+}
+.container-body a{
+    color:white;
+    text-decoration: none;
+}
+.container-body a:hover{
+    color:#1479EA;
+}
+
+.container-form-login {
+    background-color: #172838;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 0px 0px 14px 2px #149CEA;
+    width: 380px;
+    height: 400px;    
+}
+.container-form-login .container-body {
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.container-form-login .container-body input {
+    max-width: 220px;
+    width: 3000px;
+    height: 30px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    border-bottom: 2px solid #142331;    
+    background-color: #102233;
+    padding: 5px;
+    transition: .3s linear;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    margin-top:10px;
+}
+.container-form-login .container-header h2{
+    margin-top: 30px;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 45px;
+    font-family: 'Lato', sans-serif;
+    font-size: 40px;
+    color: white;
+    font-weight: 600;
+}
+.container-form-login .container-body input {
+    max-width: 220px;
+    width: 3000px;
+    height: 30px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    border-bottom: 2px solid #142331;    
+    background-color: #102233;
+    padding: 5px;
+    transition: .3s linear;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 1px;
+    margin-bottom: 13px;
+}
+
+.container-form-login .container-body input:focus {
+    border: 2px solid #149CEA;
+    caret-color: #149CEA;
+    color: #149CEA;
+    box-shadow: 4px 4px 10px #070707;
+}
+
+.container-form-login .container-body input::placeholder {
+    color: #149CEA;
+}
+
+.container-form-login .container-header h2:hover{
+    color:#149CEA;
+    transition: 1s;
+    font-size:45px;
+}
+/*This is the styel to create a new project*/
+.contactBody{    
+    background-size: cover;
+    background-attachment: fixed;
+    height:700px;
+
+}
+.title{
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 42px;
+    color: rgb(252, 252, 252);
+  }
+
+  #title-Tag-Line{
+      font-size: 20px;
+  }
+/* This will center the form */
+  .wrapper {
+    width: 80%;
+    height: 50%;
+    margin: 5% auto 0 auto; 
+  }
+
+/* form animation starts */
+  .form {
+    background: #EBEBEB;
+    text-align: center; 
+    box-shadow: 0px 0px 20px 5px #AAA; 
+    border-radius: 10px;  
+    width: 45%; 
+    height: 400px;
+    margin: 30px auto 0 auto;
+    padding: 10px 10px;  
+    animation: bounce 1.5s infinite;
+  }
+
+.name { 
+    background-color: #DF1B76;
+    border-bottom: 5px solid #B2175F;
+    color: white;
+    width:300px;
+  }
+
+  ::-webkit-input-placeholder{
+      color: white;
+      font-size: 20px;
+  }
+  .name:hover{
+    background-color: #DF1B76;
+    border-bottom: 5px solid #B2175F;
+    height:30px;
+    width:400px;
+  }
+
+  .email {
+    background-color: #7239C1;  
+    border-bottom: 5px solid #502789;
+    height:50px;
+    width:300px;
+    
+  }
+  .email:hover{
+    background-color: #7239C1;  
+    border-bottom: 5px solid #502789;
+    height:30px;
+    width:380px;
+   
+  }
+  .message {   
+    background-color: rgb(230, 108, 15);
+    border-bottom: 5px solid rgb(195, 35, 17);
+    overflow: hidden;
+    height: 100px;  
+    width:300px;
+  }
+
+  .message:hover{
+    background-color: #2DD7BB;
+    border-bottom: 5px solid #2BB09A;
+    height: 100px;
+    width:370px;
+  }
+
+  .submit{
+    border-radius:5px;
+    padding:10px;
+    background-color: #2DD7BB;  
+    border: none;
+    border-bottom: 5px solid #CB64B2; 
+    transform: translateY(-120px); 
+
+  }
+
+  .submit:hover{
+    border-bottom: 5px solid #CB64B2;  
+    box-shadow: 15px 15px 15px 5px rgba(78, 72, 77, 0.219);
+  }
+
+  .entry{
+    display: block;
+    margin: 30px auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    transition: all 0.5s ease 0s;
+    box-shadow: 0px 0px 25px 2px #AAA;  
+  }
+
+  /* Shadow to make it look like form is floating  */
+  .shadow{
+    box-shadow: 0px 0px 60px 5px #AAA;
+    opacity: 0.5;
+    border-radius: 100px;
+    width: 50%; 
+    margin: 50px auto 0 auto;
+    padding: 0 20px;  
+    animation: shadow 1.5s infinite;
+  }
+.submit{
+    border-radius:5px;
+    padding:10px;
+    width:150px;
+    color: white;
+    background-color: #EE78D1;  
+    border: none;
+    border-bottom: 5px solid #CB64B2; 
+    margin-top: 150px; 
+
+  }
+
+
+
+  @keyframes bounce{
+    0%{
+      
+    }
+    50%{
+      transform: translate(0, 8px);
+    }
+
+  }
+  @keyframes shadow{
+    0%{
+      
+    }
+    50%{
+      opacity: 0.8;
+      width: 50%;
+    }
+  }
+/*This is the styel to the creation of user stories*/
+#contact {
+    width: 500px;
+    margin:2em auto;
+    background:white;
+    position: relative;
+    }
+    #contact::after {
+    content: "";
+    display: block;
+    height: 30px;
+    width: 90%;
+    left: 5%;
+    bottom: 0;
+    position: absolute;
+    -webkit-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 100%;
+    z-index: -1;
+    }
+    #contact article {
+      padding: 1em;
+    }
+    #contact h1 {
+    background: #F2385A;
+    font-family: Oswald ,sans-serif;
+    font-size: 1.75em;
+    padding: 0.6em 0 0.6em 0.4em;
+    color: white;
+    text-shadow: 0 0.06em 0 #424242;
+    position: relative;
+    }
+    .contactbutton {
+    background: #F2385A;
+    -webkit-box-shadow: 1px 1px 0 0 #832032,2px 2px 0 0 #832032,3px 3px 0 0 #832032;
+    box-shadow: 1px 1px 0 0 #832032,2px 2px 0 0 #832032,3px 3px 0 0 #832032;
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    margin-bottom: 2px;
+    cursor: pointer;
+    }
+    .contactbutton:hover {
+    -webkit-box-shadow: 1px 1px 0 0 #832032,0px 0px 0 0 #832032,0px 0px 0 0 #832032;
+    box-shadow: 1px 1px 0 0 #832032,0px 0px 0 0 #832032,0px 0px 0 0 #832032;
+    margin-top: 22px;
+    margin-left: 2px;
+    margin-bottom: 0px;
+    }
+    .mail {
+    margin-top: 11px;
+    font-size: 15px;
+    display: inline-block;
+    border-top: 2em solid transparent;
+    border-left: 2.6em solid #832032;
+    height: 0;
+    width: 0;
+    position: relative;
+    }
+    .mail:before {
+    content: '';
+    top: -2.5em;
+    left: -2.95em;
+    display: block;
+    position: absolute;
+    border-top: 1.2em solid #832032;
+    border-left: 1.6em solid transparent;
+    border-right: 1.6em solid transparent;
+    border-bottom: 1em solid transparent;
+    font-size: 0.8em;
+    }
+    .mail::after {
+    display: block;
+    content: "";
+    position: absolute;
+    border-top: 2em solid transparent;
+    border-right: 2.6em solid #832032;
+    height: 0;
+    width: 0;
+    left: -2.18em;
+    bottom: 0;
+    }
+    #checkcontact{
+    position: absolute;
+    left: -9999px;
+    }
+    .contactform {
+    overflow: hidden;
+    max-height: 0px;
+    -webkit-transition: all linear 1s;
+    -moz-transition: all linear 1s;
+    -o-transition: all linear 1s;
+    -ms-transition: all linear 1s;
+    transition: all linear 1s;
+    }
+    #checkcontact:checked + .contactform {
+    max-height: 1000px;
+    }
+    .input_wrapper {
+    position: relative;
+    }
+    .textarea_wrapper textarea {
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    background: white;
+    border: 1px solid #DADADA;
+    box-shadow: 0 0 1px 0 #E4E4E4;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 1em;
+    -webkit-transition: all 250ms ease;
+    -moz-transition: all 250ms ease;
+    -ms-transition: all 250ms ease;
+    -o-transition: all 250ms ease;
+    transition: all 250ms ease;
+    color: #5E5E5E;
+    }
+    .input_wrapper input[type="text"] {
+    margin-top: 1em;
+    display: block;
+    width: 100%;
+    background: white;
+    border: 1px solid #DADADA;
+    box-shadow: 0 0 1px 0 #E4E4E4;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 1em;
+    -webkit-transition: all 250ms ease;
+    -moz-transition: all 250ms ease;
+    -ms-transition: all 250ms ease;
+    -o-transition: all 250ms ease;
+    transition: all 250ms ease;
+    color: #5E5E5E;
+    text-indent: 15%;
+    }
+    .input_wrapper input[type="text"]:focus {
+    background: rgba(242, 56, 90, 0.05);
+    box-shadow: inset 2px 2px 5px 0 #DADADA;
+    outline: none;
+    text-indent: 0;
+    }
+    .input_wrapper label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: #F2385A;
+    color: white;
+    font-family: Oswald ,sans-serif;
+    box-sizing: border-box;
+    width: 15%;
+    text-align: center;
+    line-height: 2.8em;
+    -webkit-transition: all 250ms ease;
+    -moz-transition: all 250ms ease;
+    -ms-transition: all 250ms ease;
+    -o-transition: all 250ms ease;
+    transition: all 250ms ease;
+    }
+    .input_wrapper input[type="text"]:focus + label {
+    left: 85%;
+    }
+    .textarea_wrapper textarea {
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+      min-height:150px;
+    background: white;
+    border: 1px solid #DADADA;
+    box-shadow: 0 0 1px 0 #E4E4E4;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 1em;
+    -webkit-transition: all 250ms ease;
+    -moz-transition: all 250ms ease;
+    -ms-transition: all 250ms ease;
+    -o-transition: all 250ms ease;
+    transition: all 250ms ease;
+    color: #5E5E5E;
+    }
+    .textarea_wrapper textarea:focus {
+    background: rgba(242, 56, 90, 0.05);
+    box-shadow: inset 2px 2px 5px 0 #DADADA;
+    outline: none;
+    }
+    .submit_wrapper {
+    text-align: center;
+    }
+    .submit_wrapper input {
+    text-align: center;
+    display: inline-block;
+    width: 40%;
+    height: 50px;
+    margin-top: 1em;
+    margin-bottom: 6px;
+    cursor: pointer;
+    background: #F2385A;
+    color: white;
+    font-family: Oswald ,sans-serif;
+    font-size: 1em;
+    border: none;
+    -webkit-box-shadow: 1px 1px 0 0 #832032,2px 2px 0 0 #832032,3px 3px 0 0 #832032;
+    box-shadow: 1px 1px 0 0 #832032,2px 2px 0 0 #832032,3px 3px 0 0 #832032;
+    -webkit-appearance: none;
+      -webkit-transition: all 250ms ease;
+    -moz-transition: all 250ms ease;
+    -ms-transition: all 250ms ease;
+    -o-transition: all 250ms ease;
+    transition: all 250ms ease;
+    }
+    .submit_wrapper input:hover {
+    -webkit-box-shadow: 1px 1px 0 0 #832032,0px 0px 0 0 #832032,0px 0px 0 0 #832032;
+    box-shadow: 1px 1px 0 0 #832032,0px 0px 0 0 #832032,0px 0px 0 0 #832032;
+    margin-top: 22px;
+    margin-left: 2px;
+    margin-bottom: 0px;
+    }
+    
+    @media (max-width: 500px){
+    #contact {
+    width: 100%;
+    }
+      .input_wrapper label {
+    line-height: 3.5em;
+    font-size: 0.8em;
+    }
+    }
