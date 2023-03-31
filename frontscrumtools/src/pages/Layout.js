@@ -1,4 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
+import Api from "../services/Api";
 const Layout=()=>{
 return <div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -21,6 +22,7 @@ return <div>
         </div>
       </nav>      
       <Outlet/>
+      <Api/>
 </div>
 }
 export default Layout;

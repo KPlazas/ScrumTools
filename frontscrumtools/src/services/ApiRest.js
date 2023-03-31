@@ -1,1 +1,0 @@
-export const ApiUserURL="https://localhost:7289/api/Users";
