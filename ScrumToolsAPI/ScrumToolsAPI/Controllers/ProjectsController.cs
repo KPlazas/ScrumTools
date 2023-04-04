@@ -23,13 +23,9 @@ namespace ScrumToolsAPI.Controllers
 
         // GET: api/Projects
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Project>>> GetProjects()
+        public async Task<string> GetProjects()
         {
-          if (_context.Projects == null)
-          {
-              return NotFound();
-          }
-            return await _context.Projects.ToListAsync();
+            return "jhonatan mamahuevo";
         }
 
         // GET: api/Projects/5

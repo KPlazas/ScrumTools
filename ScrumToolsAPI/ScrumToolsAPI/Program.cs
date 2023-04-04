@@ -3,6 +3,11 @@ using ScrumToolsAPI.Data;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddCors(options => {
+    options.AddPolicy("AllowAll", p => {
+        p.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod();
+    });
+});
 
 builder.Services.AddDbContext<ApplicationDBContext>(opciones =>
 opciones.UseSqlServer(builder.Configuration.GetConnectionString("ConexionSql")));
@@ -25,7 +30,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseCors("AllowAll");
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
