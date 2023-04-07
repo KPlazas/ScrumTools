@@ -25,7 +25,7 @@ namespace ScrumToolsAPI.Controllers
         [HttpGet]
         public async Task<string> GetProjects()
         {
-            return "jhonatan mamahuevo";
+            return "Hola soy un Api :v";
         }
 
         // GET: api/Projects/5

@@ -18,7 +18,7 @@ export const CreateProject = () => {
 
                     <textarea class="message entry" placeholder="Cualquier cosa"></textarea>
 
-                    <button onClick={ClickHandler} class="submit entry" onclick="thanks()">Submit</button>
+                    <button onClick={ClickHandler} class="submit entry" onclick="thanks()">Enviar datos</button>
                 </form>
                 <div class="shadow"></div>
             </div>
