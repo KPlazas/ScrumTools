@@ -1,0 +1,43 @@
+{"creation":{
+    "userStory":{
+    "title":"Crea tu historia de usuario",
+    "description":"Las historias de usuario son unas pocas frases en lenguaje sencillo que describen  el resultado deseado. No entran en detalles, ya que los requisitos se añaden más tarde, una vez acordados por el equipo. Las historias encajan perfectamente en marcos ágiles como scrum y kanban.",
+    "ID-HU":"ID HU",
+    "Name-HU":"Nombre HU",
+    "Dificulty-HU":"Dificultad HU",
+    "No-Epic":"N° Epica",
+    "describe":"Descripción de historia de usuario:",
+    "save":"Guardar HU"
+    },
+    "project":{
+    "button-send":"Enviar",
+    "name":"Nombre del proyecto"
+    }
+    
+    
+},
+"form":{
+    "register":{
+        "title":"Registro",
+        "name-placeholder":"Nombre",
+        "last-placeholder":"Apellido",
+        "email-placeholder":"Correo",
+        "password-placeholder":"Contraseña",
+        "have-account":"¿Ya tiene una cuenta?"
+    },
+    "login":{
+        "title":"Ingresar",
+        "email-placeholder":"Correo",
+        "password-placeholder":"Contraseña",        
+        "Create-account":"Crear una cuenta"
+    }
+},
+"nav-bar":{
+    "Home":"Inicio",
+    "Log In":"Ingresar",
+    "Sign Up":"Registro",
+    "english":"Inglés",
+    "español":"Español"
+}
+}
+

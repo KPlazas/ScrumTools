@@ -559,7 +559,7 @@ button:hover::after {
     .submit_wrapper {
     text-align: center;
     }
-    .submit_wrapper input {
+    .submit_wrapper button {
     text-align: center;
     display: inline-block;
     width: 40%;
@@ -596,5 +596,8 @@ button:hover::after {
       .input_wrapper label {
     line-height: 3.5em;
     font-size: 0.8em;
+    }
+    .button-languages{
+      margin-left:100px;
     }
     }

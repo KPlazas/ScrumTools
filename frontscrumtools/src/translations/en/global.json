@@ -1,0 +1,42 @@
+{"creation":{
+    "userStory":{
+        "title":"Create your user story",
+        "description":"The user stories are a little phrase in simple language that describe the desired result. No go into details, as the results are added later, once agreed upon by the team. The stories fit perfectly in agile frameworks like scrum and kanban.",
+        "ID-HU":"ID US",
+        "Name-HU":"Name US",
+        "Dificulty-HU":"Difficulty US",
+        "No-Epic":"No. Epic",
+        "describe":"User stories' description",
+        "save":"Save US"
+    },
+    "project":{
+        "button-send":"Send",
+        "name":"Project's name"
+    }    
+    
+},
+"form":{
+    "register":{
+        "title":"Sign Up",
+        "name-placeholder":"Name",
+        "last-placeholder":"Lastname",
+        "email-placeholder":"Email",
+        "password-placeholder":"Password",
+        "button":"Sign Up",
+        "have-account":"Already have an account?"
+    },
+    "login":{
+        "title":"Log In",
+        "email-placeholder":"Email",
+        "password-placeholder":"Password",        
+        "Create-account":"Create an account"
+    }
+},
+"nav-bar":{
+    "Home":"Home",
+    "Log In":"Log In",
+    "Sign Up":"Sign Up",
+    "english":"English",
+    "español":"Spanish"
+}
+}
