@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import {useTranslation} from "react-i18next";
 
-export const CreateProject = () => {
+export function CreateProject() {
     
     const [t,i18n]=useTranslation("global");
 
@@ -25,7 +25,7 @@ export const CreateProject = () => {
         </div>
     </div>
 }
-export const CreateUS =()=>{
+export function CreateUS (){
     const [t,i18n]=useTranslation("global");
     return <div>
         <section id="contact">

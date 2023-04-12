@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import {useTranslation} from "react-i18next";
-export const SignUp =()=>{
+export function SignUp (){
     const [t,i18n]=useTranslation("global");
 
     return <div>
@@ -29,7 +29,7 @@ export const SignUp =()=>{
         </div>
     </div>
 }
-export const Login=()=>{
+export function Login(){
     const [t,i18n]=useTranslation("global");
 
     const navigate=useNavigate();
@@ -52,5 +52,6 @@ export const Login=()=>{
             <small><Link to="/SignUp">{t("form.login.Create-account")}</Link></small>
         </form>
     </div>
+    
 </div>
 }
