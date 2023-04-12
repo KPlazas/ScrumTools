@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\OneDrive\\Ing. Software II\\clonar\\ScrumTools\\ScrumToolsAPI\\ScrumToolsAPI\\ScrumToolsAPI.csproj": {}
+    "D:\\Descargas\\ScrumToolsAPI\\ScrumToolsAPI\\ScrumToolsAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\OneDrive\\Ing. Software II\\clonar\\ScrumTools\\ScrumToolsAPI\\ScrumToolsAPI\\ScrumToolsAPI.csproj": {
+    "D:\\Descargas\\ScrumToolsAPI\\ScrumToolsAPI\\ScrumToolsAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\OneDrive\\Ing. Software II\\clonar\\ScrumTools\\ScrumToolsAPI\\ScrumToolsAPI\\ScrumToolsAPI.csproj",
+        "projectUniqueName": "D:\\Descargas\\ScrumToolsAPI\\ScrumToolsAPI\\ScrumToolsAPI.csproj",
         "projectName": "ScrumToolsAPI",
-        "projectPath": "C:\\Users\\User\\OneDrive\\Ing. Software II\\clonar\\ScrumTools\\ScrumToolsAPI\\ScrumToolsAPI\\ScrumToolsAPI.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\OneDrive\\Ing. Software II\\clonar\\ScrumTools\\ScrumToolsAPI\\ScrumToolsAPI\\obj\\",
+        "projectPath": "D:\\Descargas\\ScrumToolsAPI\\ScrumToolsAPI\\ScrumToolsAPI.csproj",
+        "packagesPath": "C:\\Users\\jhona\\.nuget\\packages\\",
+        "outputPath": "D:\\Descargas\\ScrumToolsAPI\\ScrumToolsAPI\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jhona\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

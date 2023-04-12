@@ -3,12 +3,22 @@ using ScrumToolsAPI.Data;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", p =>
+    {
+        p.AllowAnyOrigin()
+         .AllowAnyMethod()
+         .AllowAnyHeader();
+    });
+});
 
 builder.Services.AddDbContext<ApplicationDBContext>(opciones =>
 opciones.UseSqlServer(builder.Configuration.GetConnectionString("ConexionSql")));
 
 builder.Services.AddControllers().AddJsonOptions(x =>
                 x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+
 
 // Add services to the container.
 
@@ -27,6 +37,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors("AllowAll");
 
 app.UseAuthorization();
 
