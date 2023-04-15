@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "joSEWnaqnYY2z3tdn1ZV+Rfo5/ldH/7q+XDaJgQ9Yx1rBoi5Dq+4T/d6cKNsaY0RCSWK92ieUJhMatul80TkSQ==",
+  "dgSpecHash": "U8gJP7QgvBTi8H6M2rlfq16CNiw5J4uKndj5LGgwEvdXps1XwMrR26jLztWSJbOxtcCgsVErKi+b2vu1mlKw4g==",
   "success": true,
-  "projectFilePath": "D:\\Descargas\\ScrumToolsAPI\\ScrumToolsAPI\\ScrumToolsAPI.csproj",
+  "projectFilePath": "C:\\Users\\jhona\\OneDrive - UNIVERSIDAD DE CUNDINAMARCA\\Documentos\\ScrumTools\\ScrumToolsAPI\\ScrumToolsAPI\\ScrumToolsAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jhona\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\jhona\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
