@@ -4,6 +4,8 @@ import Layout from "./pages/Layout";
 import {SignUp, Login} from "./pages/FormsLS";
 import Home from "./pages/Home";
 import {CreateProject,CreateUS} from "./pages/CreateP-US";
+import ViewProjects from './pages/ViewProjects';
+import Project from './pages/Proyect';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
           <Route path='CreateProject'element={<CreateProject/>}></Route>
           <Route path='CreateStory'element={<CreateUS/>}></Route>
           <Route path='*' element={<Home/>}></Route>
+          <Route path='ViewProjects' element={<ViewProjects/>}></Route>
+          <Route path="/project/:id" element={<Project/>} />
         </Route>
       </Routes>
     </div>

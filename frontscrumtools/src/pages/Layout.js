@@ -1,5 +1,4 @@
 import { Link, Outlet } from "react-router-dom";
-import Api from "../services/Api";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 
@@ -31,7 +30,7 @@ export function Layout (){
     </header>
 
     <Outlet />
-    <Api />
+
   </div>
 }
 export default Layout;
