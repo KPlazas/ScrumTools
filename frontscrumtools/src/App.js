@@ -6,6 +6,10 @@ import Home from "./pages/Home";
 import {CreateProject,CreateUS} from "./pages/CreateP-US";
 import ViewProjects from './pages/ViewProjects';
 import Project from './pages/Proyect';
+import User from './pages/Users';
+import ViewUsers from './pages/ViewUsers';
+import ViewStories from './pages/ViewStories';
+import Storie from './pages/Storie';
 
 function App() {
   return (
@@ -20,6 +24,10 @@ function App() {
           <Route path='*' element={<Home/>}></Route>
           <Route path='ViewProjects' element={<ViewProjects/>}></Route>
           <Route path="/project/:id" element={<Project/>} />
+          <Route path='ViewUsers' element={<ViewUsers/>}></Route>
+          <Route path="/user/:id" element={<User/>} />
+          <Route path='ViewStories' element={<ViewStories/>}></Route>
+          <Route path="/storie/:id" element={<Storie/>} />
         </Route>
       </Routes>
     </div>
