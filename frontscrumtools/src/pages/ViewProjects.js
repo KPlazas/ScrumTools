@@ -5,30 +5,25 @@ function ViewProjects() {
   const proyects = GetProyects();
   return (
     <Fragment>
-      
-      <div className="container-fluid w-75">
-      <table className="table">
-        <thead>
-          <tr>
-            <th>Nombre del proyecto</th>
-            <th>     Fecha de creación</th>
-            <th>     Ir</th>
-          </tr>
-        </thead>
-        <tbody>
-          {proyects.map((item) => (
-            <tr key={item.id}>
-              <td>{item.projectName}</td>
-              <td>{item.dataCreation}</td>
-              <td><Link to={"/project/"+item.projectId}>Proyecto  {item.projectId}</Link></td>
-              
-            </tr>
-          ))}
-        </tbody>
-      </table>
-   
-       
+      <div className="container-fluid w-75">        
+        {proyects.map(proyects => (
+          
+          <div className="card" key={proyects.projectId}>
+            <div className="card-body">
+              <h5 className="card-title">{proyects.projectName}</h5>                                                 
+              <p className="card-text">Fecha: {proyects.dataCreation}</p>              
+              <Link to={"/project/" + proyects.projectId}>Ver historias de usuario</Link>
+            </div>
+          </div>
+        ))}
       </div>
+      <div className="container-projects">
+          <div className="card2">
+          <h1>hola</h1>
+          </div>
+      </div>
+
+
     </Fragment>
   );
 }

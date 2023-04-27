@@ -672,4 +672,18 @@ button:hover::after {
     }  
 }
 
-
+.container-projects{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.card2{
+    box-sizing: border-box;
+    cursor: pointer;
+    padding: 4px 100px;
+    position: relative;
+    width: 25%;
+    height: 150px;    
+    background:linear-gradient(40deg, #02061E,#020415);
+    border-radius: 6px;
+}

@@ -14,7 +14,7 @@ export function Layout (){
   return <div>
     <header class="header">
       <div class="logo">
-        <Link class="title" to="/Home">ScrumTools</Link>
+        <Link class="title" to="/Home">AgileTools</Link>
       </div>
       <nav>
         <ul class="nav-links">
