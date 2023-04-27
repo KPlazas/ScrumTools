@@ -218,20 +218,9 @@ button:hover::after {
     background-size: cover;
     background-attachment: fixed;
     height:700px;
+    
 
-}
-.title{
-    margin: 0 auto;
-    width: 50%;
-    text-align: center;
-    padding-bottom: 10px;
-    font-size: 42px;
-    color: rgb(252, 252, 252);
-  }
-
-  #title-Tag-Line{
-      font-size: 20px;
-  }
+}  
 /* This will center the form */
   .wrapper {
     width: 80%;
@@ -239,24 +228,26 @@ button:hover::after {
     margin: 5% auto 0 auto; 
   }
 
-/* form animation starts */
+/* ----------------Form create project---------------- */
   .form {
-    background: #EBEBEB;
+    background: #220e46 ;
     text-align: center; 
-    box-shadow: 0px 0px 20px 5px #AAA; 
+    box-shadow: 0px 0px 20px 5px #5a457b; 
     border-radius: 10px;  
-    width: 45%; 
-    height: 400px;
+    width: 40%; 
+    height: 200px;
     margin: 30px auto 0 auto;
     padding: 10px 10px;  
     animation: bounce 1.5s infinite;
   }
 
 .name { 
-    background-color: #DF1B76;
-    border-bottom: 5px solid #B2175F;
+    background-color: #31185d;        
     color: white;
     width:300px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
   }
 
   ::-webkit-input-placeholder{
@@ -264,54 +255,25 @@ button:hover::after {
       font-size: 20px;
   }
   .name:hover{
-    background-color: #DF1B76;
-    border-bottom: 5px solid #B2175F;
-    height:30px;
-    width:400px;
+    background-color: #31185d;
+    border-bottom: 5px solid #1a0a38;
+    height:35px;
+    width:350px;
   }
-
-  .email {
-    background-color: #7239C1;  
-    border-bottom: 5px solid #502789;
-    height:50px;
-    width:300px;
-    
-  }
-  .email:hover{
-    background-color: #7239C1;  
-    border-bottom: 5px solid #502789;
-    height:30px;
-    width:380px;
-   
-  }
-  .message {   
-    background-color: rgb(230, 108, 15);
-    border-bottom: 5px solid rgb(195, 35, 17);
-    overflow: hidden;
-    height: 100px;  
-    width:300px;
-  }
-
-  .message:hover{
-    background-color: #2DD7BB;
-    border-bottom: 5px solid #2BB09A;
-    height: 100px;
-    width:370px;
-  }
-
+  
   .submit{
     border-radius:5px;
-    padding:10px;
-    background-color: #2DD7BB;  
-    border: none;
-    border-bottom: 5px solid #CB64B2; 
+    padding:10px;    
+    border: none;    
     transform: translateY(-120px); 
-
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
   }
 
   .submit:hover{
-    border-bottom: 5px solid #CB64B2;  
-    box-shadow: 15px 15px 15px 5px rgba(78, 72, 77, 0.219);
+    border-bottom: 5px solid #1a0a38;  
+    box-shadow: 6px 6px 6px 3px #663fad;
   }
 
   .entry{
@@ -321,32 +283,21 @@ button:hover::after {
     border-radius: 5px;
     border: none;
     transition: all 0.5s ease 0s;
-    box-shadow: 0px 0px 25px 2px #AAA;  
-  }
-
-  /* Shadow to make it look like form is floating  */
-  .shadow{
-    box-shadow: 0px 0px 60px 5px #AAA;
-    opacity: 0.5;
-    border-radius: 100px;
-    width: 50%; 
-    margin: 50px auto 0 auto;
-    padding: 0 20px;  
-    animation: shadow 1.5s infinite;
-  }
+    box-shadow: 0px 0px 15px 1px #59339f;  
+    
+  }  
+  
 .submit{
     border-radius:5px;
     padding:10px;
     width:150px;
     color: white;
-    background-color: #EE78D1;  
+    background-color: #3f1685;  
     border: none;
-    border-bottom: 5px solid #CB64B2; 
+    border-bottom: 5px solid #2a0f59; 
     margin-top: 150px; 
 
   }
-
-
 
   @keyframes bounce{
     0%{
@@ -366,7 +317,7 @@ button:hover::after {
       width: 50%;
     }
   }
-/*This is the styel to the creation of user stories*/
+/*----------This is the style to the creation of user stories----------*/
 #contact {
     width: 500px;
     margin:2em auto;
@@ -603,7 +554,17 @@ button:hover::after {
 }
 
 .header .logo{
-    margin-left: -40px;
+    margin-left: -70px;
+}
+.header .logo img{
+  width: 60px;  
+  margin-right: 12px;
+  margin-bottom: 7px;
+}
+.header .logo img:hover{
+  transition: 0.5s;
+  width: 65px;
+  margin-left:-5px;
 }
 .header .logo .title{
   text-decoration: none;
@@ -612,7 +573,7 @@ button:hover::after {
   font-weight: 600;
 }
 .header .logo .title:hover{
-  color: #149CEA;
+  color: #9068d8;
   transition: 0.2s;  
   font-weight:900;
   font-size: 28px;  
@@ -639,7 +600,7 @@ button:hover::after {
 }
 
 .header .nav-links li .links:hover{
-    color: #149CEA;
+    color: #9068d8;
 }
 
 .header button{
@@ -657,10 +618,11 @@ button:hover::after {
   
 }
 .header button:hover{
-    background-color: #e2f1f8;
-    color: #149CEA;
+    background-color: #c1ace8;
+    color: #703cd2;
     transform: scale(1.1);
 }
+
 
     @media (max-width: 500px){
     #contact {
@@ -671,7 +633,7 @@ button:hover::after {
     font-size: 0.8em;
     }  
 }
-
+/*projects*/
 .container-projects{
   display: flex;
   flex-wrap: wrap;

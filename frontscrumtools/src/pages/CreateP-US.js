@@ -12,9 +12,7 @@ export function CreateProject() {
 
     return <div>
         <div class="contactBody">
-            <div class="wrapper">
-                <div class="title">
-                </div>
+            <div class="wrapper">                
                 <form class="form">
                     <input type="text" class="name entry " placeholder={t("creation.project.name")} />                    
                     <button onClick={ClickHandler} class="submit entry" onclick="thanks()">{t("creation.project.button-send")}</button>
