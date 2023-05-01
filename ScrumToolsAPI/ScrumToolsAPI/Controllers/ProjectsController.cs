@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ScrumToolsAPI.Data;
 using ScrumToolsAPI.Models;
+using ScrumToolsAPI.Models.Proyectos;
 
 namespace ScrumToolsAPI.Controllers
 {
@@ -23,13 +24,13 @@ namespace ScrumToolsAPI.Controllers
 
         // GET: api/Projects
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Project>>> GetProjects()
+        public async Task<ActionResult<IEnumerable<Project>>> GetProjects(int idUser)
         {
             if (_context.Projects == null)
             {
                 return NotFound();
             }
-            return await _context.Projects.ToListAsync();
+            return await _context.Projects.Where(u=>u.Fk_User==idUser).ToListAsync();
         }
 
         // GET: api/Projects/5
@@ -85,16 +86,21 @@ namespace ScrumToolsAPI.Controllers
         // POST: api/Projects
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Project>> PostProject(Project project)
+        public async Task<ActionResult<Project>> PostProject(ProjectPost projectPost)
         {
           if (_context.Projects == null)
           {
               return Problem("Entity set 'ApplicationDBContext.Projects'  is null.");
           }
+            Project project = new Project();
+            project.ProjectName= projectPost.ProjectName;
+            project.Fk_User= projectPost.Fk_User;
+            project.DataCreation = DateTime.Now;
+
             _context.Projects.Add(project);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetProject", new { id = project.ProjectId }, project);
+            return Ok();
         }
 
         // DELETE: api/Projects/5

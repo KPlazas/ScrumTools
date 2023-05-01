@@ -13,8 +13,7 @@ namespace ScrumToolsAPI.Models
         public string StoryDescription { get; set; }
         [Required]
         public int StoryDifficulty { get; set; }
-        [Required]
-        public int StoryEpic { get; set; }
+        [Required]        
 
         //Foreign Key (one userstory will belong to one project)
         public int Fk_Project { get; set; }

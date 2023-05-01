@@ -214,6 +214,7 @@ button:hover::after {
     font-size:45px;
 }
 /*This is the style to create a new project*/
+
 .contactBody{    
     background-size: cover;
     background-attachment: fixed;
@@ -284,7 +285,6 @@ button:hover::after {
     border: none;
     transition: all 0.5s ease 0s;
     box-shadow: 0px 0px 15px 1px #59339f;  
-    
   }  
   
 .submit{

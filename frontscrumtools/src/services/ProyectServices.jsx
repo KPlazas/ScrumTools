@@ -1,16 +1,27 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-export function GetProyects(id) {
+
+export async function GetProyects(id) {
   const [projects, setProyects] = useState([]);
-  useEffect(() => {
-    const fetchProyects = async () => {
-      const response = await axios.get("https://localhost:7276/api/Projects/"); //+id)
-      setProyects(response.data);
-    };
-    fetchProyects();
-  }, []);
-  return projects;
+  const requestBody = {
+    idUser: id
+  };
+  return await axios.post('https://localhost:7276/api/Projects', requestBody, {
+    headers: {
+      'accept': '/',
+      'Content-Type': 'application/json'
+    }
+  })
+    .then(response => {
+      console.log('La compilación fue:', response.data);
+      return response.data.output;
+    })
+    .catch(error => {
+      console.error('Hubo un error:', error);
+      return "Error en la compilación";
+    }); 
+ 
 }
 export function GetProyect(id) {
   const [project, setProyect] = useState([]);

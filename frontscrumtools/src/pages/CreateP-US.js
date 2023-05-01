@@ -11,6 +11,10 @@ export function CreateProject() {
     }
 
     return <div>
+        <div> 
+            hola, da click en el siguiente botón para abrir el modal
+            <button></button>
+        </div>
         <div class="contactBody">
             <div class="wrapper">                
                 <form class="form">

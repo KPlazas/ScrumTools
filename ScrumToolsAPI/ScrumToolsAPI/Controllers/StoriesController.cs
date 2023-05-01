@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ScrumToolsAPI.Data;
 using ScrumToolsAPI.Models;
+using ScrumToolsAPI.Models.Stories;
 
 namespace ScrumToolsAPI.Controllers
 {
@@ -23,13 +24,13 @@ namespace ScrumToolsAPI.Controllers
 
         // GET: api/Stories
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Story>>> GetStories()
+        public async Task<ActionResult<IEnumerable<Story>>> GetStories(int idProject)
         {
           if (_context.Stories == null)
           {
               return NotFound();
           }
-            return await _context.Stories.ToListAsync();
+            return await _context.Stories.Where(s=>s.Fk_Project==idProject).ToListAsync();
         }
 
         // GET: api/Stories/5
@@ -84,16 +85,24 @@ namespace ScrumToolsAPI.Controllers
         // POST: api/Stories
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Story>> PostStory(Story story)
+        public async Task<ActionResult<Story>> PostStory(StoriesPost storyPost)
         {
           if (_context.Stories == null)
           {
               return Problem("Entity set 'ApplicationDBContext.Stories'  is null.");
           }
+
+            Story story = new Story();
+
+            story.StoryName = storyPost.StoryName;
+            story.StoryDescription = storyPost.StoryDescription;
+            story.StoryDifficulty=storyPost.StoryDifficulty;
+            story.Fk_Project= storyPost.Fk_Project; 
+
             _context.Stories.Add(story);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetStory", new { id = story.StoryId }, story);
+            return Ok();
         }
 
         // DELETE: api/Stories/5
