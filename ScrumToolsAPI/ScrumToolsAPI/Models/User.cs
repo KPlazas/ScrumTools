@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using ScrumToolsAPI.Entities;
 
 namespace ScrumToolsAPI.Models
 {

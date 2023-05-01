@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ScrumToolsAPI.Data;
-using ScrumToolsAPI.Models;
+using ScrumToolsAPI.Entities;
 using ScrumToolsAPI.Models.Stories;
 
 namespace ScrumToolsAPI.Controllers
