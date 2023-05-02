@@ -8,6 +8,6 @@ namespace ScrumToolsAPI.Models.Proyectos
         
         public string ProjectName { get; set; }                
         
-        public int Fk_User { get; set; }                
+        public string UserId { get; set; }                
     }
 }

@@ -1,24 +1,21 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ScrumToolsAPI.Models
+namespace ScrumToolsAPI.Entities
 {
     public class Story
     {
-        [Key]        
-        public int StoryId { get; set; }
+        [Key]
+        public int Id { get; set; }
         [Required]
         public string StoryName { get; set; }
         [Required]
         public string StoryDescription { get; set; }
         [Required]
         public int StoryDifficulty { get; set; }
-        [Required]        
 
-        //Foreign Key (one userstory will belong to one project)
-        public int Fk_Project { get; set; }
-        [ForeignKey("Fk_Project")]
+        [ForeignKey("ProjectId")]
         public Project Project { get; set; }
-
+        public int ProjectId { get; set; }
     }
 }

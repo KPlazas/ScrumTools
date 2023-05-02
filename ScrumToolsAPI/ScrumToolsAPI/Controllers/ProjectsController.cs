@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
+using dis_identityserver.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ScrumToolsAPI.Data;
-using ScrumToolsAPI.Models;
+using ScrumToolsAPI.Entities;
 using ScrumToolsAPI.Models.Proyectos;
 
 namespace ScrumToolsAPI.Controllers
@@ -23,26 +25,26 @@ namespace ScrumToolsAPI.Controllers
         }
 
         // GET: api/Projects
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<Project>>> GetProjects(int idUser)
+        [HttpGet("All/{id}")]
+        public async Task<ActionResult<IEnumerable<Project>>> GetProjects(string id)
         {
-            if (_context.Projects == null)
-            {
-                return NotFound();
-            }
-            return await _context.Projects.Where(u=>u.Fk_User==idUser).ToListAsync();
+          if (_context.Projects == null)
+          {
+              return NotFound();
+          }
+            return await _context.Projects.Where(p => p.UserId == id).ToListAsync();
         }
 
         // GET: api/Projects/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Project>> GetProject(int id)
         {
-            if (_context.Projects == null)
-            {
-                return NotFound();
-            }
+          if (_context.Projects == null)
+          {
+              return NotFound();
+          }
             var project = await _context.Projects.FindAsync(id);
-            project.Storys = _context.Stories.Where(n => n.Fk_Project == id).ToList();
+
             if (project == null)
             {
                 return NotFound();
@@ -51,17 +53,15 @@ namespace ScrumToolsAPI.Controllers
             return project;
         }
 
-
         // PUT: api/Projects/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutProject(int id, Project project)
         {
-            if (id != project.ProjectId)
+            if (id != project.Id)
             {
                 return BadRequest();
-            }
-
+            }            
             _context.Entry(project).State = EntityState.Modified;
 
             try
@@ -93,14 +93,13 @@ namespace ScrumToolsAPI.Controllers
               return Problem("Entity set 'ApplicationDBContext.Projects'  is null.");
           }
             Project project = new Project();
-            project.ProjectName= projectPost.ProjectName;
-            project.Fk_User= projectPost.Fk_User;
+            project.ProjectName = projectPost.ProjectName;
+            project.UserId = projectPost.UserId;
             project.DataCreation = DateTime.Now;
-
             _context.Projects.Add(project);
             await _context.SaveChangesAsync();
 
-            return Ok();
+            return CreatedAtAction("GetProject", new { id = project.Id }, project);
         }
 
         // DELETE: api/Projects/5
@@ -125,7 +124,7 @@ namespace ScrumToolsAPI.Controllers
 
         private bool ProjectExists(int id)
         {
-            return (_context.Projects?.Any(e => e.ProjectId == id)).GetValueOrDefault();
+            return (_context.Projects?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }

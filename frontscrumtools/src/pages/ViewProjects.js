@@ -1,52 +1,50 @@
-import { Fragment, useState } from "react";
-import { GetProyect, GetProyects } from "../services/ProyectServices";
-import { Link } from "react-router-dom";
+import { Fragment, useState, useEffect } from "react";
+import { fetchProjects } from "../services/ProyectServices";
+import { getAuthenticatedUser } from "../config/auth";
 function ViewProjects() {
-  const [id, setId] = useState(0);
-  const [proyects, setProyects] = useState([]);
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log();
-    setProyects(GetProyects(id));
-  };
-  const handleChange = (e) => {
-    setId(e.target.Categories);
-  };
+  const [projects, setProjects] = useState([]);
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    async function getUser() {
+      const user = await getAuthenticatedUser();
+      setUser(user);
+    }
+    getUser();
+  }, []);
+
+  useEffect(() => {
+    const fetchData = async (user) => {
+      const data = await fetchProjects(user.profile.sub);
+      setProjects(data);
+    };
+    if (user) {
+      fetchData(user);
+    }
+  }, [user]);
 
   return (
     <Fragment>
-      <label>
-        Categories:
-        <input
-          type="text"
-          name="Categories"
-          value={id}
-          onChange={handleChange}
-        />
-      </label>
-      <button onClick={handleSubmit}>enviar</button>
-      <p>{id}</p>
-      <br />
-
-      <div className="container-fluid w-75">
-        {proyects.length!==0 ? (<>
-          {proyects.map(proyects => (
-            <div className="card" key={proyects.projectId}>
-              <div className="card-body">
-                <h5 className="card-title">{proyects.projectName}</h5>
-                <p className="card-text">Fecha: {proyects.dataCreation}</p>
-                <Link to={"/project/" + proyects.projectId}>Ver historias de usuario</Link>
-              </div>
-            </div>
+      {projects && <table className="table">
+        <thead>
+          <tr>
+            <th>Índice</th>
+            <th>Project Name</th>
+            <th>Data Creation</th>
+            <th>Id</th>
+          </tr>
+        </thead>
+        <tbody>
+          {projects.map((project, index) => (
+            <tr key={index}>
+              <td>{index + 1}</td>
+              <td>{project.projectName}</td>
+              <td>{new Date(project.dataCreation).toLocaleString()}</td>
+              <td>{project.id}</td>
+            </tr>
           ))}
-        </>) : (<></>)}
-      </div>
-      <div className="container-projects">
-        <div className="card2">
-          <h1>hola</h1>
-        </div>
-      </div>
-
+        </tbody>
+      </table>}
 
     </Fragment>
   );

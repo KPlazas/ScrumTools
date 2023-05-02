@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using ScrumToolsAPI.Entities;
-using ScrumToolsAPI.Models;
 
 namespace ScrumToolsAPI.Data
 {

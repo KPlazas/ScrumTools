@@ -9,6 +9,6 @@ namespace ScrumToolsAPI.Models.Stories
         public string StoryName { get; set; }        
         public string StoryDescription { get; set; }       
         public int StoryDifficulty { get; set; }                 
-        public int Fk_Project { get; set; }                
+        public int ProjectId { get; set; }                
     }
 }
