@@ -43,7 +43,7 @@ export function Layout() {
         <button className="btn" onClick={() => changeLanguage('en')}>{t("nav-bar.english")}</button>
         <button className="btn" onClick={() => changeLanguage('es')}>{t("nav-bar.español")}</button>
       </div>
-    </header >
+    </header >  
     <Outlet />
   </>
 }

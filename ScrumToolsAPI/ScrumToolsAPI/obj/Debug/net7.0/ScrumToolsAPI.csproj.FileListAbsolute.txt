@@ -1396,3 +1396,5 @@ C:\Users\User\OneDrive\Ing. Software II\Git\ScrumToolsAPI\ScrumToolsAPI\bin\Debu
 C:\Users\User\OneDrive\Ing. Software II\Git\ScrumToolsAPI\ScrumToolsAPI\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\User\OneDrive\Ing. Software II\Git\ScrumToolsAPI\ScrumToolsAPI\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\User\OneDrive\Ing. Software II\Git\ScrumToolsAPI\ScrumToolsAPI\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+C:\Users\User\OneDrive\Ing. Software II\Git\ScrumToolsAPI\ScrumToolsAPI\obj\Debug\net7.0\ScrumToolsAPI.RazorAssemblyInfo.cache
+C:\Users\User\OneDrive\Ing. Software II\Git\ScrumToolsAPI\ScrumToolsAPI\obj\Debug\net7.0\ScrumToolsAPI.RazorAssemblyInfo.cs
