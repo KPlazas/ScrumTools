@@ -1,51 +1,52 @@
-import { useEffect, useState } from "react";
 import axios from "axios";
+import { useEffect, useState } from "react";
 
-export async function fetchProjects(id) {
-  const url = `https://localhost:7276/api/Projects/All/${id}`;
+export async function fetchProjects(projectId) {
+  const url = `https://agiletools-api.azurewebsites.net/api/Projects/All/${projectId}`;
 
   try {
     const response = await axios.get(url, {
       headers: {
-        'accept': 'text/plain',
+        accept: "text/plain",
       },
     });
 
-    const data = response.data;
-    console.log(data);
-    return data;
+    return response.data;
   } catch (error) {
-    throw new Error(`Error fetching projects: ${error.response.status}`);
+    throw new Error("Error al obtener los proyectos");
   }
 }
 
-export function GetProyect(id) {
-  const [project, setProyect] = useState([]);
+export function FetchProjectById(id) {
+  const [project, setProject] = useState(null);
 
   useEffect(() => {
     const fetchProject = async () => {
       const response = await axios.get(
-        "https://localhost:7276/api/Projects/" + id
+        "https://agiletools-api.azurewebsites.net/api/Projects/" + id
       );
       const object = response.data;
-      setProyect(object);
+      setProject(object);
     };
     fetchProject();
   }, [id]);
 
   return project;
 }
-export const createProject = async (projectData) => {
+
+export async function createProject(projectData) {
+  const url = "https://agiletools-api.azurewebsites.net/api/Projects";
+
   try {
-    const response = await axios.post('https://localhost:7276/api/Projects', projectData, {
+    const response = await axios.post(url, projectData, {
       headers: {
-        'accept': 'text/plain',
-        'Content-Type': 'application/json'
-      }
+        accept: "text/plain",
+        "Content-Type": "application/json",
+      },
     });
+
     return response.data;
   } catch (error) {
-    console.error('Error al crear el proyecto:', error);
-    throw error;
+    throw new Error("Error al crear el proyecto");
   }
-};
+}

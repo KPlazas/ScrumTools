@@ -550,7 +550,7 @@ body{
   width: 1145px;
   height: 450px;  
 }
-<<<<<<< HEAD
+/*Head*/
 .card2{
     box-sizing: border-box;
     cursor: pointer;
@@ -732,7 +732,7 @@ a.button:hover {
   box-shadow: none;
   
 }
-=======
+
 #home{
   font-family: 'Lato', sans-serif;
 }
@@ -824,7 +824,7 @@ th, td {
 th {
   background-color: #05165a;
   font-weight: bold;
-  color: #fff;
+  color: black;
   text-transform: uppercase;
 }
 
@@ -1002,4 +1002,4 @@ form p{
 }
 
 /*:::Fin Ventana Modal:::*/
->>>>>>> 772f960b5d48d830f0eeec61246842d9eccd43ab
+

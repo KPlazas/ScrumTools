@@ -5,7 +5,6 @@ namespace ScrumToolsAPI.Models.Stories
 {
     public class StoriesPost
     {
-                
         public string StoryName { get; set; }        
         public string StoryDescription { get; set; }       
         public int StoryDifficulty { get; set; }                 

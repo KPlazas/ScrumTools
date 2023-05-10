@@ -1,14 +1,14 @@
 import { UserManager } from 'oidc-client';
 
 const config = {
-  authority: 'https://localhost:7003',
+  authority: 'https://agile-auth.azurewebsites.net/',
   client_id: 'interactive',
-  redirect_uri: 'http://localhost:3000/callback',
+  redirect_uri: 'https://agile-tools-d84c1.web.app//callback',
   client_secret: 'secret',
   response_type: 'code',
   scope: 'scrumtoolsapi.g openid profile email',
-  post_logout_redirect_uri: 'https://localhost:3000',
-  end_session_endpoint: 'https://localhost:7003/connect/endsession'
+  post_logout_redirect_uri: 'https://agile-tools-d84c1.web.app/',
+  end_session_endpoint: 'https://agile-auth.azurewebsites.net//connect/endsession'
 };
 
 const userManager = new UserManager(config);

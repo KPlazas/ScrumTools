@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { createProject } from '../services/ProyectServices';
 import { getAuthenticatedUser } from '../config/auth';
 import { useTranslation } from 'react-i18next';
+import Layout from './Layout';
 const NewProject = () => {
     const [t, i18n] = useTranslation("global");
     const [projectName, setProjectName] = useState('');
@@ -33,6 +34,7 @@ const NewProject = () => {
 
     return (
         <>
+        <Layout/>
             <div class="boton-modal">
                 <label for="btn-modal">
                     Abrir Modal

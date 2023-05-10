@@ -14,7 +14,6 @@ opciones.UseSqlServer(builder.Configuration.GetConnectionString("ConexionSql")))
 
 builder.Services.AddControllers().AddJsonOptions(x =>
                 x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
-
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -30,6 +29,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
 app.UseCors("AllowAll");
 app.UseHttpsRedirection();
 

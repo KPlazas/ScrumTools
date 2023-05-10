@@ -1,6 +1,6 @@
-import { useNavigate } from "react-router-dom"
 import { useTranslation } from "react-i18next";
-import { Fragment } from "react";
+import '../App.css';
+import Layout from "./Layout";
 
 export function CreateUS() {
     const [t, i18n] = useTranslation("global");

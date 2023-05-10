@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.5.33502.453
+VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScrumToolsAPI", "ScrumToolsAPI\ScrumToolsAPI.csproj", "{5BA0B6D4-B4EB-4421-9E87-83BE308527DC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScrumToolsAPI", "ScrumToolsAPI\ScrumToolsAPI.csproj", "{F13A1B1D-B408-436A-B92F-C5FD21E4BE47}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5BA0B6D4-B4EB-4421-9E87-83BE308527DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5BA0B6D4-B4EB-4421-9E87-83BE308527DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5BA0B6D4-B4EB-4421-9E87-83BE308527DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5BA0B6D4-B4EB-4421-9E87-83BE308527DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F13A1B1D-B408-436A-B92F-C5FD21E4BE47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F13A1B1D-B408-436A-B92F-C5FD21E4BE47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F13A1B1D-B408-436A-B92F-C5FD21E4BE47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F13A1B1D-B408-436A-B92F-C5FD21E4BE47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {4D9F8D71-0190-4929-8AE4-CD052D1DFF4E}
+		SolutionGuid = {2616CA90-4671-4375-B5BE-EC0F42DAB353}
 	EndGlobalSection
 EndGlobal

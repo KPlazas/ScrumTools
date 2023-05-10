@@ -17,7 +17,7 @@ function LoginButton() {
   }
 
   return (
-    <a onClick={handleLogin} disabled={isLoading} className='links' style={{cursor:'pointer'}}>
+    <a onClick={handleLogin} disabled={isLoading} className='nav-link' style={{cursor:'pointer'}}>
       {isLoading ? "Loading..." : "Log in"}
     </a>
   );
