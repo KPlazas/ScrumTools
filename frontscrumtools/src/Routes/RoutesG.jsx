@@ -15,6 +15,7 @@ function RoutesG() {
     <Fragment>
       <Routes>
           <Route exact path="/" element={<Home />} />
+          <Route exact path="*" element={<Home />} />
           <Route path="/SignUp" element={<Register />} />
           <Route path="/CreateStory" element={<CreateUS />} />
           <Route path="/ViewProjects" element={<ViewProjects />} />
@@ -22,7 +23,6 @@ function RoutesG() {
           <Route path="/storie/:id" element={<Storie />} />
           <Route path="/callback" element={<Callback />} />
           <Route path="/logout" element={<Logout />} />
-          <Route path="/CreateProject" element={<NewProject />} />
         </Routes>
     </Fragment>
 

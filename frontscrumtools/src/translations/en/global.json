@@ -35,7 +35,8 @@
 "nav-bar":{
     "Home":"Home",
     "Log In":"Log In",
-    "Sign Up":"Sign Up",    
+    "Sign Up":"Sign Up",   
+    "Log Out" :"Log Out",
     "english":"English",
     "español":"Spanish",
     "cargando":"Loading..."

@@ -12,21 +12,43 @@ function Storie() {
     const response = await axios.get(
       "https://agiletools-api.azurewebsites.net/api/Stories/delete/" + id
     );
-    alert("Borrada");
-    navigate('/project/' + storie.ProjectId)
+    alert("Historia Borrada");
+    navigate("/project/" + storie.ProjectId);
   };
 
   return (
     <>
-      <Layout />
+      <Layout class="mini"/>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       {storie && (
         <>
           <div className="container">
-            <h1>{storie.StoryName}</h1>
-            <p>Descripcion {storie.StoryDescription}</p>
-            <p>Dificultad {storie.StoryDifficulty}</p>
+            <div class="historias">
+              <h1>{storie.StoryName}</h1>
+              <p>Descripcion {storie.StoryDescription}</p>
+              <p>Dificultad {storie.StoryDifficulty}</p>
+            </div>
           </div>
-          <button onClick={handleDelete}>Borrar</button>
+          <button class="fun-button" onClick={handleDelete}>
+            Borrar
+          </button>
         </>
       )}
     </>

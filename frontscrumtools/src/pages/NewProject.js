@@ -34,7 +34,6 @@ const NewProject = () => {
 
     return (
         <>
-        <Layout/>
             <div class="boton-modal">
                 <label for="btn-modal">
                     Abrir Modal

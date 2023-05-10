@@ -35,6 +35,7 @@
 "nav-bar":{
     "Home":"Inicio",
     "Log In":"Ingresar",
+    "Log Out" :"Cerrar Sesión",
     "Sign Up":"Registro",    
     "english":"Inglés",
     "español":"Español",
