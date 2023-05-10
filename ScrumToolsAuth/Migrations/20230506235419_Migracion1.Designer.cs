@@ -12,8 +12,8 @@ using dis_identityserver.Data;
 namespace dis_identityserver.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230501200655_m2")]
-    partial class m2
+    [Migration("20230506235419_Migracion1")]
+    partial class Migracion1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
