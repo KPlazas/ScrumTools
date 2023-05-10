@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import userManager from '../config/auth';
 
-function LoginButton() {
+
+function LoginButton() {  
+  
   const [isLoading, setIsLoading] = useState(false);
 
   async function handleLogin() {
@@ -16,7 +18,7 @@ function LoginButton() {
 
   return (
     <a onClick={handleLogin} disabled={isLoading} className='links' style={{cursor:'pointer'}}>
-      {isLoading ? 'Cargando...' : 'Iniciar sesión'}
+      {isLoading ? "Loading..." : "Log in"}
     </a>
   );
 }

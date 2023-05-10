@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { createProject } from '../services/ProyectServices';
 import { getAuthenticatedUser } from '../config/auth';
-
+import { useTranslation } from 'react-i18next';
 const NewProject = () => {
+    const [t, i18n] = useTranslation("global");
     const [projectName, setProjectName] = useState('');
     const [user, setUser] = useState(null);
 
@@ -31,26 +32,33 @@ const NewProject = () => {
     };
 
     return (
-        <div class="contactBody">
-            <div class="wrapper">
-                <form onSubmit={handleSubmit} className='form'>
-                    <label>
-                        Nombre del proyecto:
+        <>
+            <div class="boton-modal">
+                <label for="btn-modal">
+                    Abrir Modal
+                </label>
+            </div>
+            <input type="checkbox" id="btn-modal" />
+            <div class="container-modal">
+                <div class="content-modal">
+                    <div class="btn-cerrar">
+                        <label for="btn-modal" class="bi bi-x-circle"></label>
+                    </div>
+                    <form onSubmit={handleSubmit}>
+                        <p>Crear Nuevo Proyecto</p>
                         <input
-                            className='name entry'
                             type="text"
                             value={projectName}
                             onChange={(e) => setProjectName(e.target.value)}
-                            placeholder='toma mango'
-                        />
-                    </label>
-                    <button type="submit" className='submit entry'>Crear proyecto</button>
-                </form>
-                <div class="shadow"></div>
+                            class="name" placeholder="Ingresar nombre proyecto" />
+                        <br />
+                        <br />
+                        <button class="save">{t("creation.project.button-send")}</button>
+                    </form>
+                </div>
             </div>
-            <script src="app.js"></script>
-        </div>
-
+            <script src="app.js"></script>        
+        </>
     );
 };
 
