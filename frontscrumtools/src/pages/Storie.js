@@ -1,9 +1,11 @@
 import { useParams, useNavigate } from "react-router-dom";
-import { FetchStoryById, DeleteStory } from "../services/StoriesService";
+import { FetchStoryById } from "../services/StoriesService";
 import Layout from "./Layout";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 
 function Storie() {
+  const [t, i18n] = useTranslation("global");
   const { id } = useParams();
   const storie = FetchStoryById(id);
   const navigate = useNavigate();
@@ -18,37 +20,25 @@ function Storie() {
 
   return (
     <>
-      <Layout class="mini"/>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
+      <Layout />
       <br></br>
       <br></br>
       <br></br>
       {storie && (
         <>
-          <div className="container">
+          <div className="container_HU">
             <div class="historias">
               <h1>{storie.StoryName}</h1>
-              <p>Descripcion {storie.StoryDescription}</p>
-              <p>Dificultad {storie.StoryDifficulty}</p>
+              <br></br>
+              <p>{t("creation.Story.Description")}:    {storie.StoryDescription}</p>
+              <br></br>
+              <p>{t("creation.Story.Difficulty")}:   {storie.StoryDifficulty}</p>
+              <br></br>
+              <button class="fun-button" onClick={handleDelete}>
+              {t("creation.Story.DeleteHU")}
+            </button>
             </div>
           </div>
-          <button class="fun-button" onClick={handleDelete}>
-            Borrar
-          </button>
         </>
       )}
     </>

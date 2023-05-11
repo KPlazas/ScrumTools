@@ -4,10 +4,12 @@ import { getAuthenticatedUser } from "../config/auth";
 import { Link } from "react-router-dom";
 import Layout from "./Layout";
 import NewProject from "./NewProject";
+import { useTranslation } from "react-i18next";
+
 function ViewProjects() {
   const [projects, setProjects] = useState([]);
   const [user, setUser] = useState(null);
-
+  const [t, i18n] = useTranslation("global");
   useEffect(() => {
     async function getUser() {
       const user = await getAuthenticatedUser();
@@ -41,7 +43,7 @@ function ViewProjects() {
       >
         <section id="home">
           <br />
-          <h1>Mis proyectos</h1>
+          <h1>{t("creation.Story.MyProyect")}</h1>
           <br />
         </section>
 

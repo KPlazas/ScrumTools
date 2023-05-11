@@ -4,8 +4,10 @@ import { FetchStoriesById, CreateStory } from "../services/StoriesService";
 import { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import Layout from "./Layout";
+import { useTranslation } from "react-i18next";
 
 function Project() {
+  const [t, i18n] = useTranslation("global");
   const { id } = useParams();
   const project = FetchProjectById(id);
   const stories = FetchStoriesById(id);
@@ -26,102 +28,111 @@ function Project() {
   };
 
   const handleSubmit = (e) => {
-
     // Aquí puedes hacer lo que necesites con los valores ingresados en el formulario
 
     CreateStory(newStorie);
     // Limpia el formulario después de enviar los datos
   };
   return (
-    <Fragment>
+    <>
       <Layout />
-      <div className="container">
-        {project ? (
-          <>
-            <h1>Detalles del Proyecto</h1>
-            <p>ID: {project.Id}</p>
-            <p>Nombre: {project.ProjectName}</p>
-            <p>Fecha de Creación: {project.DataCreation}</p>
-            {stories && (
+      <br></br>
+      <br></br>
+      <br></br>
+      <div class="contenedor-father">
+        <div class="contenedor-child1">
+          <div className="contenedor_info">
+            {project ? (
               <>
-                <table className="table">
-                  <thead>
-                    <tr>
-                      <th>ID</th>
-                      <th>Name</th>
-                      <th>Description</th>
-                      <th>Difficulty</th>
-                    </tr>
-                  </thead>
-                  <tbody>
+                <div class="contenedor_info">
+                  <div class="contenido_info">
+                    <h1>{project.ProjectName}</h1>
+                    <p>
+                      {t("creation.project.date")} : {project.DataCreation}
+                    </p>
+                  </div>
+                </div>
+                <br></br>
+                <div class="historiasProyect">
+                  <div class="cards">
                     {stories.map((objeto, index) => (
-                      <tr key={index}>
-                        <td>{index + 1}</td>
-                        <td>
-                          <Link to={"/storie/" + objeto.Id}>
-                            {objeto.StoryName}
-                          </Link>
-                        </td>
-                        <td>{objeto.StoryDescription}</td>
-                        <td>{objeto.StoryDifficulty}</td>
-                      </tr>
+                      <Link
+                        to={"/storie/" + objeto.Id}
+                        class="card red"
+                        key={index}
+                      >
+                        <p class="tip">
+                          {t("creation.userStory.Name-HU")}: {objeto.StoryName}
+                        </p>
+                        <p class="second-text">
+                          {t("creation.Story.StoryDifficulty")}:  
+                          {objeto.StoryDifficulty}
+                        </p>
+                        <p class="second-text">
+                          {t("creation.userStory.describe")}:   
+                          {objeto.StoryDescription}
+                        </p>
+                      </Link>
                     ))}
-                  </tbody>
-                </table>
+                  </div>
+                </div>
+              </>
+            ) : (
+              <>
+                <p>{t("creation.Story.Loading")}</p>
               </>
             )}
-          </>
-        ) : (
-          <>
-            <p>Loading...</p>
-          </>
-        )}
+          </div>
+        </div>
+        <div ckass="contenedor-child2">
+          <div class="contenedor_CHU">
+            <form onSubmit={handleSubmit} class="Formulario_CHU">
+              <div className="mb_CHU">
+                <label class="laber_CHU">{t("creation.Story.StoryName")}</label>
+                <input
+                  type="text"
+                  class="input_CHU"
+                  id="StoryName"
+                  name="StoryName"
+                  value={newStorie.StoryName}
+                  onChange={handleChange}
+                />
+              </div>
+              <div class="mb_CHU">
+                <label class="laber_CHU">
+                  {t("creation.Story.StoryDescription")}
+                </label>
+                <input
+                  type="text"
+                  class="input_CHU"
+                  id="StoryDescription"
+                  name="StoryDescription"
+                  value={newStorie.StoryDescription}
+                  onChange={handleChange}
+                />
+              </div>
+              <div class="mb_CHU">
+                <label class="laber_CHU">
+                  {" "}
+                  {t("creation.Story.StoryDifficulty")}:
+                </label>
+                <input
+                  type="number"
+                  class="input_CHU"
+                  id="StoryDifficulty"
+                  name="StoryDifficulty"
+                  value={newStorie.StoryDifficulty}
+                  onChange={handleChange}
+                />
+              </div>
+              <button type="submit" class="btn_crear_CHU">
+                {t("creation.project.button-send")}
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-3">
-          <label htmlFor="storyName" className="form-label">
-            Story Name:
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="StoryName"
-            name="StoryName"
-            value={newStorie.StoryName}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="storyDescription" className="form-label">
-            Story Description:
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="StoryDescription"
-            name="StoryDescription"
-            value={newStorie.StoryDescription}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="storyDifficulty" className="form-label">
-            Story Difficulty:
-          </label>
-          <input
-            type="number"
-            className="form-control"
-            id="StoryDifficulty"
-            name="StoryDifficulty"
-            value={newStorie.StoryDifficulty}
-            onChange={handleChange}
-          />
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Submit
-        </button>
-      </form>
-    </Fragment>
+    </>
   );
 }
 export default Project;

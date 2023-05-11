@@ -50,7 +50,7 @@ export function Layout() {
                   </li>
                   <li>
                     <Link className="nav-link" to="/logout">
-                      Logout
+                      {t("nav-bar.Log Out")}
                     </Link>
                   </li>
                 </>

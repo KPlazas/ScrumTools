@@ -25,7 +25,7 @@ function Home() {
       <br></br>
       <br></br>
       <div class="banner-container">
-      <img src={SCRUM} alt="Banner Image" class="banner-image"/>
+        <img src={SCRUM} alt="Banner Image" class="banner-image" />
       </div>
 
       <div
@@ -55,11 +55,7 @@ function Home() {
             {t("home.m4")}{" "}
             <a
               href="#manifiesto"
-              style={{
-                color: "#0c7499",
-                fontWeight: "500",
-                cursor: "pointer",
-              }}
+              style={{ color: "#0c7499", fontWeight: "500", cursor: "pointer" }}
             >
               {t("home.m5")}
             </a>{" "}
@@ -86,49 +82,113 @@ function Home() {
                 {t("home.title4")}
               </h4>
               <br />
-              <div class="row" style={{ textAlign: "left" }}>
-                <div class="col-md-3">
-                  <div class="card text-dark bg-light" id="cards">
-                    <img src={Value1} class="card-img-top" alt="..." />
-                    <div class="card-body">
-                      <h5 class="card-title" style={{ fontWeight: "600" }}>
+
+              <div
+                className="card_row"
+                style={{ display: "flex", justifyContent: "space-around" }}
+              >
+                <div
+                  className="card_col"
+                  style={{
+                    width: "23%",
+                    margin: "20px",
+                    boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
+                  }}
+                >
+                  <div className="card_text_15" style={{ padding: "16px" }}>
+                    <img
+                      src={Value1}
+                      className="card_img"
+                      alt="..."
+                      style={{ width: "100%" }}
+                    />
+                    <div className="card_body">
+                      <h5
+                        className="card_title"
+                        style={{ fontWeight: "bold", color: "#333" }}
+                      >
                         {t("home.t2")}
                       </h5>
-                      <p class="card-text">{t("home.t3")}</p>
+                      <p className="card_text">{t("home.t3")}</p>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
-                  <div class="card text-dark bg-light" id="cards">
-                    <img src={Value2} class="card-img-top" alt="..." />
-                    <div class="card-body">
-                      <h5 class="card-title" style={{ fontWeight: "600" }}>
+                <div
+                  className="card_col"
+                  style={{
+                    width: "23%",
+                    margin: "20px",
+                    boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
+                  }}
+                >
+                  <div className="card_text_15" style={{ padding: "16px" }}>
+                    <img
+                      src={Value2}
+                      className="card_img"
+                      alt="..."
+                      style={{ width: "100%" }}
+                    />
+                    <div className="card_body">
+                      <h5
+                        className="card_title"
+                        style={{ fontWeight: "bold", color: "#333" }}
+                      >
                         {t("home.t4")}
                       </h5>
-                      <p class="card-text">{t("home.t5")}</p>
+                      <p className="card_text">{t("home.t5")}</p>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
-                  <div class="card text-dark bg-light" id="cards">
-                    <img src={Value3} class="card-img-top" alt="..." />
-                    <div class="card-body">
-                      <h5 class="card-title" style={{ fontWeight: "600" }}>
+                <div
+                  className="card_col"
+                  style={{
+                    width: "23%",
+                    margin: "20px",
+                    boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
+                  }}
+                >
+                  <div className="card_text_15" style={{ padding: "16px" }}>
+                    <img
+                      src={Value3}
+                      className="card_img"
+                      alt="..."
+                      style={{ width: "100%" }}
+                    />
+                    <div className="card_body">
+                      <h5
+                        className="card_title"
+                        style={{ fontWeight: "bold", color: "#333" }}
+                      >
                         {t("home.t6")}
                       </h5>
-                      <p class="card-text">{t("home.t7")}</p>
+                      <p className="card_text">{t("home.t7")}</p>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3 ">
-                  <div class="card text-dark bg-light" id="cards">
-                    <img src={Value4} class="card-img-top" alt="..." />
-                    <div class="card-body">
-                      <h5 class="card-title" style={{ fontWeight: "600" }}>
+                <div
+                  className="card_col"
+                  style={{
+                    width: "23%",
+                    margin: "20px",
+                    boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
+                  }}
+                >
+                  <div className="card_text_15" style={{ padding: "16px" }}>
+                    <img
+                      src={Value4}
+                      className="card_img"
+                      alt="..."
+                      style={{ width: "100%" }}
+                    />
+                    <div className="card_body">
+                      <h5
+                        className="card_title"
+                        style={{ fontWeight: "bold", color: "#333" }}
+                      >
                         {t("home.t8")}
                       </h5>
                       <br />
-                      <p class="card-text">{t("home.t9")}</p>
+                      <p className="card_text">{t("home.t9")}</p>
                     </div>
                   </div>
                 </div>

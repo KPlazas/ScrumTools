@@ -18,8 +18,7 @@ export function CreateUS() {
                     <p class="input_wrapper"><input type="text" name="contact_email" value="" id="contact_email" /><label for="contact_email">{t("creation.userStory.Dificulty-HU")}</label></p>
                     <p class="input_wrapper"><input type="text" name="contact_sujet" value="" id="contact_sujet" /><label for="contact_sujet">{t("creation.userStory.No-Epic")}</label></p>
                     <br />
-                    <p class="textarea_wrapper">{t("creation.userStory.describe")}<textarea name="contact_message" id="contact_message" > </textarea></p>
-                    <p class="submit_wrapper"><button type="submit">{t("creation.userStory.save")}</button></p>
+                    <p class="textarea_wrapper">{t("creation.userStory.describe")}<textarea name="contact_message" id="contact_message" > </textarea></p>                    
                 </form>
             </article>
         </section>

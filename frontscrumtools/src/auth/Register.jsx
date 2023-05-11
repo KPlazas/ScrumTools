@@ -70,69 +70,74 @@ const Register = () => {
   };
 
   return (
-    <div style={styles.container}>
-      <h2 style={styles.title}>Registro</h2>
-      <form onSubmit={handleSubmit} style={styles.form}>
-        <label style={styles.label}>
-          Nombre de usuario:
-          <input
-            type="text"
-            name="userName"
-            value={userData.userName}
-            onChange={handleChange}
-            style={styles.input}
-          />
-        </label>
-        <label style={styles.label}>
-          Correo electrónico:
-          <input
-            type="email"
-            name="email"
-            value={userData.email}
-            onChange={handleChange}
-            style={styles.input}
-          />
-        </label>
-        <label style={styles.label}>
-          Número de teléfono:
-          <input
-            type="text"
-            name="phoneNumber"
-            value={userData.phoneNumber}
-            onChange={handleChange}
-            style={styles.input}
-          />
-        </label>
-        <label style={styles.label}>
-          Nombre completo:
-          <input
-            type="text"
-            name="name"
-            value={userData.name}
-            onChange={handleChange}
-            style={styles.input}
-          />
-        </label>
-        <label style={styles.label}>
-          Contraseña:
-          <input
-            type="password"
-            name="password"
-            value={userData.password}
-            onChange={handleChange}
-            style={styles.input}
-          />
-        </label>
-        <button type="submit" style={styles.button} className="mb-2">
-          Registrarse
-        </button>
-        <Link to="/" className="btn btn-success mb-2">
-          Home
-        </Link>
-        <LoginButton/>
-        
-      </form>
-    </div>
+    <div class="Contenedor_registro">
+    <h2 class="titulo_registro">Registro</h2>
+    <form onSubmit={handleSubmit} class="formulario_Registro">
+      <label class="label_registro">
+        Nombre de usuario:
+        <input
+          type="text"
+          name="userName"
+          value={userData.userName}
+          onChange={handleChange}
+          class="input_registro"
+        />
+      </label>
+      <label class="label_registro">
+        Correo electrónico:
+        <input
+          type="email"
+          name="email"
+          value={userData.email}
+          onChange={handleChange}
+          class="input_registro"
+        />
+      </label>
+      <label class="label_registro">
+        Número de teléfono:
+        <input
+          type="text"
+          name="phoneNumber"
+          value={userData.phoneNumber}
+          onChange={handleChange}
+          class="input_registro"
+        />
+      </label>
+      <label class="label_registro">
+        Nombre completo:
+        <input
+          type="text"
+          name="name"
+          value={userData.name}
+          onChange={handleChange}
+          class="input_registro"
+        />
+      </label>
+      <label class="label_registro">
+        Contraseña:
+        <input
+          type="password"
+          name="password"
+          value={userData.password}
+          onChange={handleChange}
+          class="input_registro"
+        />
+      </label>
+      <br></br>
+      <button type="submit"  class="boton_Registro">
+        Registrarse
+      </button>
+      <br></br>
+     
+      <Link to="/" class="casa_registro">
+        Home
+      </Link>
+      <br></br>
+      
+      <LoginButton/>
+      
+    </form>
+  </div>
   );
 };
 

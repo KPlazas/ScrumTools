@@ -1,18 +1,20 @@
 import { Fragment } from "react";
 import { GetStories } from "../services/UserStoriesServices";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 function ViewStories() {
   const stories = GetStories();
+  const [t, i18n] = useTranslation("global");
   return (
     <Fragment>
    <div className="container-fluid w-75">
       <table className="table">
         <thead>
           <tr>
-            <th>Nombre de HU</th>
-            <th>Descripcion HU</th>
-            <th>Dificultad HU</th>
-            <th>Proyecto al que pertenece</th>
+            <th>{t("creation.userStory.Name-HU")}</th>
+            <th>{t("creation.userStory.describe")}</th>
+            <th>{t("creation.userStory.Difficulty-HU")}</th>
+            <th>{t("creation.userStory.Project")}</th>
           </tr>
         </thead>
         <tbody>

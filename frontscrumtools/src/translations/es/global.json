@@ -1,17 +1,30 @@
 {"creation":{
-    "userStory":{
-    "title":"Crea tu historia de usuario",
-    "description":"Las historias de usuario son unas pocas frases en lenguaje sencillo que describen  el resultado deseado. No entran en detalles, ya que los requisitos se añaden más tarde, una vez acordados por el equipo. Las historias encajan perfectamente en marcos ágiles como scrum y kanban.",
-    "ID-HU":"ID HU",
-    "Name-HU":"Nombre HU",
-    "Dificulty-HU":"Dificultad HU",
-    "No-Epic":"N° Epica",
-    "describe":"Descripción de historia de usuario:",
-    "save":"Guardar HU"
+    "userStory":{            
+    "project":"Proyecto principal",
+    "Name-HU":"Nombre",
+    "Dificulty-HU":"Dificultad",    
+    "describe":"Descripción"    
+    
+    },
+    "Story":{
+        "Description":"Descripción",
+        "Difficulty":"Dificultad",
+        "DeleteHU":"Eliminar HU",
+        "MyProyect":"Mis Proyectos",
+        "StoryName":"Nombre de Historia",
+        "StoryDescription":"Descripción de Historia",
+        "StoryDifficulty":"Dificultad de Historia",
+        "Loading":"Cargando..."
+        
     },
     "project":{
+    "titleProject":"Crear nuevo proyecto",
     "button-send":"Enviar",
-    "name":"Nombre del proyecto"
+    "name":"Ingresar nombre proyecto",
+    "buttonCreate":"Crear Proyecto",
+    "details":"Detalles del Proyecto",
+    "nameProject":"Nombre del Proyecto",
+    "date":"Fecha de Creación"    
     }
     
     
@@ -24,22 +37,15 @@
         "email-placeholder":"Correo",
         "password-placeholder":"Contraseña",
         "have-account":"¿Ya tiene una cuenta?"
-    },
-    "login":{
-        "title":"Ingresar",
-        "email-placeholder":"Correo",
-        "password-placeholder":"Contraseña",        
-        "Create-account":"Crear una cuenta"
-    }
+    }    
 },
 "nav-bar":{
     "Home":"Inicio",
-    "Log In":"Ingresar",
     "Log Out" :"Cerrar Sesión",
     "Sign Up":"Registro",    
     "english":"Inglés",
-    "español":"Español",
-    "cargando":"Cargando..."
+    "español":"Español"
+
 
 },
 "home":{

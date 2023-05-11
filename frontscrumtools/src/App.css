@@ -733,133 +733,10 @@ a.button:hover {
   
 }
 
-#home{
-  font-family: 'Lato', sans-serif;
-}
-#home p{
-  font-size: 18px;
-}
-#home h1{
-  font-size: 30px;
-  font-weight: 800;
-  text-align: center;
-}
-#home h1::after, #home h1::before {
-  content: '';
-  width: 0%;
-  height: 2px;
-  background: #0fa4da;
-  display: block;
-  transition: 0.5s;
-}
-
-#home h1:hover::after, #home h1:hover::before {
-  width: 100%;
-}
-
-#cards{
-  border: 1px solid rgb(85, 85, 85);
-  box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, 0.5);
-}
-
-.styled-list {
-  list-style-type: none;
-  counter-reset: item;
-  padding: 0;
-  
-}
-
-.styled-list li {
-  position: relative;
-  padding-left: 35px;
-  margin-right: 20px;
-  margin-bottom: 20px;
-  font-family: 'Arial', sans-serif;
-  font-size: 16px;
-  color: #333;
-}
-.styled-list p{
-  margin-left:15px;
-  font-size: 18px;
-  font-family: 'Lato', sans-serif;
-}
-
-.styled-list li:before {
-  content: counter(item);
-  counter-increment: item;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-color: #08055c;
-  color: #fff;
-  font-weight: bold;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 30px;
-  font-size: 18px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  transform: rotate(-10deg);
-}
-
-.styled-list li:hover:before {
-  background-color: #0600b0;
-}
-
-table {
-  border-collapse: collapse;
-  width: 80%;
-  margin: 0 auto;
-  border:1px solid #2c3762;
-}
-
-th, td {
-
-  padding: 8px;
-  text-align: left;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-th {
-  background-color: #05165a;
-  font-weight: bold;
-  color: black;
-  text-transform: uppercase;
-}
-
-tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-td:first-child {
-  font-weight: bold;
-  color: #555;
-}
-
-h1 {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 24px;
-  color: #333;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
-}
-
-td:hover {
-  background-color: #05165a;
-  color: #fff;
-  border-color: #fff;
-  cursor: pointer;
-}
+/*----------------------------estilos tarjetas Home-------------------------------*/
 
 
-
-/*---------------------------- Modal ------------------------------------------*/
+/*---------------------------- iniciModal ------------------------------------------*/
 
 /*:::Boton-Modal:::*/
 .boton-modal{
@@ -1004,18 +881,18 @@ form p{
 /*:::Fin Ventana Modal:::*/
 /*----------------------------estilos nuevos para navbar-----------------------*/
 .navbar {
-  background-color: #545a60;
+  background-color: #ffffff;
   padding: 10px;
   position: fixed;
   width: 100%;
   height: 50px;
   z-index: 999;
+  margin-top: auto;
 }
-
 
 .navbar-brand {
   font-weight: bold;
-  color: #343a40;
+  color: #000000;
   font-size: 20px;
   animation: bounce 1s infinite;
 }
@@ -1028,21 +905,19 @@ form p{
   100% { transform: translateY(0); }
 }
 
-
-
-.nav-item {
-  margin-left: 10px; /* Ajusta el margen izquierdo para separar los elementos del menú */
+.navbar-nav .nav-item {
+  margin-right: 10px;
 }
 
 .nav-link {
-  color: #343a40;
+  color: #000000;
   font-size: 16px;
   transition: color 0.3s;
 }
 
 .nav-link:hover {
-  color: #007bff;
-  animation: rotate 1s infinite;
+  color: #000000;
+  animation: rotate 0.5s infinite;
 }
 
 @keyframes rotate {
@@ -1052,17 +927,17 @@ form p{
 }
 
 .btn {
-  background-color: purple;
+  background-color: #051539;
   color: white;
   padding: 10px 20px;
   border: none;
-  border-radius: 5px;
-  margin-left: 10px;
+  border-radius: 10px;
   font-size: 14px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.4s;
   animation: neonGlow 1s infinite alternate;
-  
+  right: 125px; /* Ajusta la cantidad de píxeles según tus necesidades */
+  margin-left: 125px; /* Ajusta el margen izquierdo para separar el botón de otros elementos */
 }
 
 
@@ -1070,14 +945,12 @@ form p{
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin-right: 10px; /* Agrega un margen derecho para separar el menú del borde derecho */
 }
 
-
 @keyframes neonGlow {
-  0% { box-shadow: 0 0 5px #2c1246; }
-  50% { box-shadow: 0 0 20px #2c1246 }
-  100% { box-shadow: 0 0 5px #2c1246; }
+  0% { box-shadow: 0 0 5px #073bb4; }
+  50% { box-shadow: 0 0 20px #073bb4; }
+  100% { box-shadow: 0 0 5px #073bb4; }
 }
 
 
@@ -1096,46 +969,8 @@ form p{
   height: auto;
 }
 
-.fun-button {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 18px;
-  font-weight: bold;
-  text-transform: uppercase;
-  border: none;
-  border-radius: 5px;
-  background-color: #ff7f50;
-  color: #fff;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  transition: background-color 0.3s ease;
-}
 
-.fun-button::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.7);
-  z-index: -1;
-  transition: transform 0.3s ease;
-}
 
-.fun-button:hover {
-  background-color: #ffac8a;
-}
-
-.fun-button:hover::before {
-  transform: translate(-50%, -50%) scale(2);
-  width: 200px;
-  height: 200px;
-}
 /*---------------historias de usuario------------------------------------ */
 .historias {
   background-color: #f2f2f2;
@@ -1151,10 +986,6 @@ form p{
 .historias p {
   font-size: 16px;
   margin-bottom: 5px;
-}
-/*--------------estilo layout--------------------------------*/
-.mini{
-  margin-top: -10%;
 }
 
 /*------------------------Proyectos cards-----------------------------*/
@@ -1237,7 +1068,684 @@ form p{
     opacity: 1;
     transform: translateX(20%);  
   }
+
+
+  /*------------------------inicio formulario registro--------------------*/
+  .Contenedor_registro {
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    animation: fadeIn 1s;
+    margin-top: 5%;
+  }
   
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .titulo_registro {
+    font-size: 24px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 20px;
+    animation: slideInDown 2s;
+  }
+  
+  @keyframes slideInDown {
+    0% {
+      transform: translateY(-100px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .formulario_Registro {
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 1s;
+  }
+  
+  .label_registro {
+    margin-bottom: 15px;
+  }
+  
+  .label_registro > input {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1.5px solid #000000;
+    transition: border-color 0.3s;
+  }
+  
+  .label_registro > input:focus {
+    outline: none;
+    border-color: #051539;
+    box-shadow: 0 0 5px #051539;
+  }
+  
+  .boton_Registro {
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #051539;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    animation: pulse 1s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .casa_registro {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #2f1052;
+    font-weight: bold;
+    text-decoration: none;
+    animation: slideInUp 1s;
+  }
+  
+  @keyframes slideInUp {
+    0% {
+      transform: translateY(100px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .input_registro {
+    animation: bounce 1s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-10px);
+    }
+  }
+  /*-------------------------Boton eliminar historias de usuario----------------------*/
+  .fun-button {
+    padding: 10px 20px;
+    background-color: #051539;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    position: center;
+    overflow: hidden;
+  }
+  
+  .fun-button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 150%;
+    height: 150%;
+    background-color: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+  }
+  
+  .fun-button::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 150%;
+    height: 150%;
+    background-color: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+  }
+  
+  .fun-button:hover::before,
+  .fun-button:hover::after {
+    opacity: 1;
+  }
+  
+  .fun-button:hover {
+    color: #fff;
+  }
+  
+  .fun-button:hover span {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  
+  .fun-button span {
+    position: relative;
+    z-index: 2;
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  }
+  
+  .fun-button span::before,
+  .fun-button span::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .fun-button span::before {
+    transform: translateX(-100%);
+  }
+  
+  .fun-button span::after {
+    transform: translateX(100%);
+  }
+  
+  .fun-button:hover span::before,
+  .fun-button:hover span::after {
+    transform: translateX(0);
+  }
+  /*---------------------Vista de historia de usuarios-------------------------*/
+  .container_HU {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 4%;
+    padding: 20px;
+  }
+  
+  .historias {
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    padding: 20px;
+    animation: fadeIn 1s;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .historias h1 {
+    font-size: 28px;
+    color: #130e4a;
+    margin-bottom: 10px;
+    animation: scaleIn 0.5s;
+  }
+  
+  @keyframes scaleIn {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .historias p {
+    color: #000000;
+    margin-bottom: 5px;
+    animation: slideIn 0.5s;
+    margin:0 auto;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  /*---------Historias del proyecto-----------*/
+  .historiasProyect{
+    margin:0 auto;
+  }
+  .historiasProyect .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .historiasProyect .cards .red {
+    background-color: #2e1762;
+  }
+  
+  .historiasProyect .cards .card {  
+    justify-content: center; 
+    text-decoration: none; 
+    text-align: center;
+    min-height: 100px;
+    width: 560px;
+    max-height: auto;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 400ms;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+          'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+          sans-serif;
+  }  
+  .historiasProyect .cards .card p.tip {  
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-top: 20px;  
+  }
+  .historiasProyect .cards .card p.second-text {
+    font-size: .7em;
+    margin-left: 90px;
+    margin-right: 90px;
+    margin-bottom: 20px;
+  }
+  
+  .historiasProyect .cards .card:hover {
+    transform: scale(1.1, 1.1);
+  }
+  .historiasProyect .cards:hover > .card:not(:hover) {
+    filter: blur(10px);
+    transform: scale(0.9, 0.9);
+  }
+  .historiasProyect .containerProject{
+    display: flex;
+  }
+/*---------------------Estilos formulario crear historias-------------------------*/
+.contenedor_CHU {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: -18%;
+}
+
+.Formulario_CHU {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 9px 14px rgb(0, 0, 0);
+  animation: slide-in 1s ease-in-out;
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.Formulario_CHU .mb_CHU,
+.Formulario_CHU .mb_Numero_CHU {
+  margin-bottom: 20px;
+}
+
+.laber_CHU {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.input_CHU {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+
+.input_CHU:focus {
+  border-color: #2e1762;
+}
+
+.btn_crear_CHU {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #2e1762;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn_crear_CHU::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: rgba(255, 255, 255, 0.267);
+  z-index: -1;
+  transition: height 0.9s;
+}
+
+.btn_crear_CHU:hover::before {
+  height: 100%;
+}
+
+.btn_crear_CHU::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.btn_crear_CHU:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+/*--------contenedores informacion proyecto------*/
+.contenedor-father{  
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1rem;
+  padding-bottom: 2rem;
+}
+.contenedor-child1{
+  float:left;
+  margin-left: 4%;
+  max-width: 850px;
+}
+.contenedor-child2{
+  float:right;
+  margin-right: 60px;
+}
+
+/* Estilos adicionales para mejorar la apariencia */
+
+.Formulario_CHU {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.mb_CHU,
+.mb_Numero_CHU {
+  position: relative;
+}
+
+.mb_CHU::before,
+.mb_Numero_CHU::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #2e1762;
+  transform: scaleX(0);
+  transition: transform 1s;
+}
+
+.mb_CHU:focus-within::before,
+.mb_Numero_CHU:focus-within::before {
+  transform: scaleX(1);
+}
+/*-----------------estilos informacion proyecto----------------------*/
+.contenedor_info {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 6px 9px rgb(0, 0, 0);
+  text-align: center;
+  max-width: 750px;
+}
+
+.contenido_info h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.contenido_info p {
+  margin-bottom: 5px;
+}
+
+/* Estilos adicionales para mejorar la apariencia */
+
+.contenedor_info {
+  max-width: 700px;
+  margin: 0 auto;
+}
+/*----------------------------estilos Tabala  Home-------------------------------*/
+#home{
+  font-family: 'Lato', sans-serif;
+}
+#home p{
+  font-size: 18px;
+}
+#home h1{
+  font-size: 30px;
+  font-weight: 800;
+  text-align: center;
+}
+#home h1::after, #home h1::before {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #0fa4da;
+  display: block;
+  transition: 0.5s;
+}
+
+#home h1:hover::after, #home h1:hover::before {
+  width: 100%;
+}
+
+#cards{
+  border: 1px solid rgb(85, 85, 85);
+  box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, 0.5);
+}
+
+.styled-list {
+  list-style-type: none;
+  counter-reset: item;
+  padding: 0;
+  
+}
+
+.styled-list li {
+  position: relative;
+  padding-left: 35px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+.styled-list p{
+  margin-left:15px;
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+}
+
+.styled-list li:before {
+  content: counter(item);
+  counter-increment: item;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #08055c;
+  color: #fff;
+  font-weight: bold;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  font-size: 18px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transform: rotate(-10deg);
+}
+
+.styled-list li:hover:before {
+  background-color: #0600b0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin: 0 auto;
+  border:1px solid #2c3762;
+}
+
+th, td {
+
+  padding: 8px;
+  text-align: left;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+th {
+  background-color: #05165a;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+td:first-child {
+  font-weight: bold;
+  color: #000000;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 24px;
+  color: #333;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+}
+
+td:hover {
+  background-color: #05165a;
+  color: #fff;
+  border-color: #fff;
+  cursor: pointer;
+}
+
+/*----------------------------estilos tarjetas Home-------------------------------*/
+.card_row {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.card_col {
+  width: 40%;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 10px 0 rgb(0, 0, 0);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card_col:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px 0 rgb(0, 0, 0);
+}
+
+.card_img {
+  width: 100%;
+  object-fit: cover;
+  height: 200px;
+  transition: transform 0.2s;
+}
+
+.card_col:hover .card_img {
+  transform: scale(1.1);
+}
+
+.card_body {
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.card_title {
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.card_text {
+  margin-bottom: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card_body {
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+
+
+
+
+
+
+
+  
+    
 
 
 
